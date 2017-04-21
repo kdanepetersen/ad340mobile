@@ -3,15 +3,46 @@ package com.thethoughtfield.ad340;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
+    private static final String TAG = MainActivity.class.getSimpleName();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Log.d(TAG, "onCreate() method started");
+    }
+    protected void onStart() {
+        super.onStart();
+        Log.d(TAG, "onStart() method started");
+    }
+
+    protected void onResume() {
+        super.onResume();
+        Log.d(TAG, "onResume() method started");
+    }
+
+    protected void onPause() {
+        super.onPause();
+        Log.d(TAG, "onPause() method started");
+    }
+
+    protected void onStop() {
+        super.onStop();
+        Log.d(TAG, "onStop() method started");
+    }
+
+    protected void onRestart() {
+        super.onRestart();
+        Log.d(TAG, "onRestart() method started");
+    }
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d(TAG, "onDestroy() method started");
     }
     /** Called when the user taps the What's Up button */
     public void sendMessage(View view) {
